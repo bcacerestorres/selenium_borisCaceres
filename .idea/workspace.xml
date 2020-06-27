@@ -30,11 +30,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="" />
+    <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ejemplo2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ejercicio3.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
