@@ -30,9 +30,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ejercicio4.java" afterDir="false" />
-    </list>
+    <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,6 +103,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1593559567078">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1593559567078" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1593559567078">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1593559567078" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1593559567077">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1593559567077" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1593559567078">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1593559567078" />
     <state x="79" y="51" width="1099" height="568" key="new project wizard" timestamp="1593559409039">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
