@@ -30,11 +30,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="" />
+    <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Automotora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Camion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,7 +59,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Automotora">
+    <configuration name="Automotora" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Automotora" />
+      <module name="selenium_borisCaceres" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ejercicio3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ejercicio3" />
       <module name="selenium_borisCaceres" />
@@ -58,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Automotora" />
         <item itemvalue="Application.ejercicio3" />
       </list>
     </recent_temporary>
@@ -86,5 +105,31 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="81" key="FileChooserDialogImpl" timestamp="1593561400664">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593561400664" />
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1594175306081">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594175306081" />
+    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1594175306081">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594175306081" />
+    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1594175306081">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594175306081" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1594175306081">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594175306081" />
+    <state x="171" y="0" key="new project wizard" timestamp="1593561709322">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="171" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1593561709322" />
   </component>
 </project>
