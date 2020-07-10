@@ -15,33 +15,6 @@ public class Producto {
         NroProducto++;
     }
 
-    // constructor con nombre
-    public Producto(String unNombre) {
-        this.Nombre = unNombre;
-        this.Codigo = 1;
-        this.Importado = false;
-        this.NroLote = "Desconocido";
-        NroProducto++;
-    }
-
-    // constructor con nombre , codigo
-    public Producto(String unNombre, int unCodigo) {
-        this.Nombre = unNombre;
-        this.Codigo = unCodigo;
-        this.Importado = false;
-        this.NroLote = "Desconocido";
-        NroProducto++;
-    }
-
-    // constructor con nombre, codigo, importado
-    public Producto(String unNombre, int unCodigo, boolean unImportado) {
-        this.Nombre = unNombre;
-        this.Codigo = unCodigo;
-        this.Importado = unImportado;
-        this.NroLote = "Desconocido";
-        NroProducto++;
-    }
-
     // constructor con nombre, codigo, importado , numero de lote
     public Producto(String unNombre, int unCodigo, boolean unImportado, String unLote) {
         this.Nombre = unNombre;
@@ -92,8 +65,8 @@ public class Producto {
     // Si el producto es importado, se debe mostrar. “Este producto es importado”, sino, “Producto nacional”
     public String toString() {
         return "El producto se llama  " + this.getNombre() + " ,con codigo "
-                + this.getCodigo() + " , " + this.esImportado(this.getImportado()) + "  ,con numero de lote" + this.getLote()
-                +"  , numero de producto "+getNproducto();
+                + this.getCodigo() + "  ,  " + this.esImportado(this.getImportado()) + "  ,  con numero de lote " + this.getLote()
+                +"   ,  numero de producto   "+getNproducto();
     }
 
     //metoco mostrar si es importado
