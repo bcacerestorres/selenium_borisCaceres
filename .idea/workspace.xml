@@ -6,6 +6,7 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
@@ -31,6 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +59,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Automotora">
+  <component name="RunManager" selected="Application.GestionarProductos">
     <configuration name="Automotora" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Automotora" />
+      <module name="selenium_borisCaceres" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GestionarProductos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GestionarProductos" />
       <module name="selenium_borisCaceres" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,6 +83,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GestionarProductos" />
         <item itemvalue="Application.Automotora" />
         <item itemvalue="Application.ejercicio3" />
       </list>
@@ -139,22 +149,27 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593561400664" />
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1594343882504">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1594336525617">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594343882504" />
-    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1594343882503">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594336525617" />
+    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1594336525616">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594343882503" />
-    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1594343882503">
+    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594336525616" />
+    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1594336525616">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594343882503" />
-    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1594343882503">
+    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594336525616" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1594336525617">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594343882503" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594336525617" />
+    <state x="451" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594261383005">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="451" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1594261383005" />
+
     <state x="171" y="0" key="new project wizard" timestamp="1593561709322">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
