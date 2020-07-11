@@ -4,7 +4,7 @@ public class GestionarProductos {
         // Pedir los datos del producto
         Scanner input = new Scanner(System.in);
 
-        System.out.println("-----------------------Datos para los articulos----------------------------------");
+        System.out.println("-----------------------Datos para los articulos 1----------------------------------");
         System.out.println("Ingrese el nombre del producto 1 :  ");
         String nombreProd1 = input.nextLine();
         System.out.println("----------------------------------------------------------------------------------");
@@ -21,6 +21,10 @@ public class GestionarProductos {
         boolean importadoProd1 = input.nextBoolean();
         System.out.println("------------------------------------------------------------------------------------");
 
+        // limpiar buffer
+        input.nextLine();
+
+        System.out.println("-----------------------------------Datos producto 2----------------------------------------");
         System.out.println("Ingrese el nombre del producto 2 :  ");
         String nombreProd2 = input.nextLine();
         System.out.println("-------------------------------------------------------------------------------------");
@@ -29,6 +33,7 @@ public class GestionarProductos {
         String loteProd2 = input.nextLine();
         System.out.println("-------------------------------------------------------------------------------------");
 
+        System.out.println("-----------------------Datos para los articulos 2----------------------------------");
 
        System.out.println("Ingrese el codigo del producto 2 ");
         int codigoProd2 = input.nextInt();
@@ -37,6 +42,8 @@ public class GestionarProductos {
         System.out.println("Ingrese true o false si el producto 2 es importado :  ");
         boolean importadoProd2 = input.nextBoolean();
         System.out.println("-------------------------------------------------------------------------------------");
+
+        System.out.println("-----------------------Datos para los articulos 3----------------------------------");
 
 
        System.out.println("Ingrese el nombre del producto 3 :  ");
@@ -50,7 +57,9 @@ public class GestionarProductos {
         System.out.println("-------------------------------------------------------------------------------------");
         System.out.println("Ingrese true o false si el producto 3 es importado :  ");
         boolean importadoProd3 = input.nextBoolean();
-      
+        System.out.println("-------------------------------------------------------------------------------------");
+
+        input.close();
         // mostrar productos en pantalla
         Producto  prod1= new Producto(nombreProd1,codigoProd1,importadoProd1,nloteProd1);
         System.out.println("--------------------------Resumen del producto 1--------------------------------------");
