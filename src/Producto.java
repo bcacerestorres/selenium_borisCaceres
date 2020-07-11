@@ -96,7 +96,7 @@ public class Producto {
                 +"  , numero de producto "+getNproducto();
     }
 
-    //metoco mostrar si es importado
+    //metodo mostrar si es importado
     public String esImportado(boolean unImportado) {
         if (unImportado == true) {
             return "Este producto es importado";
