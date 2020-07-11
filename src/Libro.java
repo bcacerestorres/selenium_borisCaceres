@@ -33,7 +33,7 @@ public Libro(){
     public void setNumero_paginas(int unNpagina) { this.Numero_paginas =unNpagina ;}
     //metodo de impresion
     public String toString() {
-    return "El libro con  ISBN"+this.getISBN()+" creado por el autor" +this.getAutor() +" tiene "+this.getNumero_paginas()+" paginas";
+    return " El titulo del libro   "+this.getTitulo()+" con  ISBN  "+this.getISBN()+" creado por el autor  " +this.getAutor() +" tiene "+this.getNumero_paginas()+" paginas ";
     }
 
     //Si el autor está en null, se debe mostrar “desconocido”.
