@@ -32,6 +32,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a5241e01-43db-43e5-9328-371e47f25ea0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GestionarProductos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Producto.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.GestionarProductos">
+  <component name="RunManager" selected="Application.Automotora">
     <configuration name="Automotora" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Automotora" />
       <module name="selenium_borisCaceres" />
@@ -81,8 +83,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GestionarProductos" />
         <item itemvalue="Application.Automotora" />
+        <item itemvalue="Application.GestionarProductos" />
         <item itemvalue="Application.ejercicio3" />
       </list>
     </recent_temporary>
@@ -143,6 +145,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594512994779">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594512994779" />
     <state x="421" y="81" key="FileChooserDialogImpl" timestamp="1593561400664">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
