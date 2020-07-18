@@ -4,36 +4,35 @@ public class metodos_arreglos {
     // main
     public static void main(String[] args) {
         //Definir un arreglo de Double de 16 posiciones. Imprimir todos los valores del mismo.
-        double [ ] a = new double [16];
-        llenarDouble(a);
-         imprimirDouble(a);
+        double [ ] arregloenteros = new double [16];
+        llenarDouble(arregloenteros);
+         imprimirDouble(arregloenteros);
        // Definir un arreglo de Booleanos con 9 posiciones. Imprimir todos los valores del arreglo.
-        boolean[] b = new boolean[9];
-        b[0]=true;
-        b[1]=false;
-        b[2]=true;
-        b[3]=false;
-        imprimirBoolean(b);
+        boolean[] arregloboleanos = new boolean[9];
+        arregloboleanos[0]=true;
+        arregloboleanos[1]=false;
+        arregloboleanos[2]=true;
+        arregloboleanos[3]=false;
+        imprimirBoolean(arregloboleanos);
       //  Crear un array de números de 100 posiciones, que contendrá los números del 1 al 100.
         //  Obtener la suma de todos ellos y el promedio.
-          int []  c= new int [100];
-        int pivoteInt=1;
+          int []  arregloentero100= new int [100];
         int suma = 0;
         // llenar arreglo
-        for(int j=0;j<c.length;j++){
-            c[j]=pivoteInt;
-            pivoteInt++;
-            suma = suma + pivoteInt;
+        for(int j=0;j<arregloentero100.length;j++){
+            arregloentero100[j]=j;
+            j++;
+            suma = suma + j;
         }
-        float promedio = suma / c.length;
-        imprimirInt(c);
+        float promedio = suma / arregloentero100.length;
+        imprimirInt(arregloentero100);
         System.out.println("-------------------------------------------------------------------------");
         System.out.println("El promedio es " + promedio);
        // Llenar un array con números aleatorios. Imprimir todos los números en pantalla.
-        int []  d= new int [20];
+        int []  arregloaleatorio= new int [20];
         System.out.println("-------------------------------------------------------------------------");
-         llenarAletorio(d);
-         imprimirInt(d);
+         llenarAletorio(arregloaleatorio);
+         imprimirInt(arregloaleatorio);
 
         //Crear un array de booleanos con 10 posiciones llamado asientosLibres y
         // colocar todos sus elementos en true.
@@ -47,48 +46,48 @@ public class metodos_arreglos {
 
        // Contar el número de elementos positivos, negativos y ceros en un array de 5 enteros.
         //Mostrar la cantidad de números positivos, negativos y ceros: Ej. “Se ingresaron 2 números positivos, 1 número negativo y 1 cero”
-        int []  e= new int [5];
+        int []  arregloentero5= new int [5];
         int positivo=0;
         int negativo =0;
         int cero=0;
-        e[0]=-2;
-        e[1]=-1;
-        e[2]=-2;
-        e[3]=1;
-        e[4]=2;
+        arregloentero5[0]=-2;
+        arregloentero5[1]=-1;
+        arregloentero5[2]=-2;
+        arregloentero5[3]=1;
+        arregloentero5[4]=2;
 
-        for(int j=0;j<e.length;j++){
-         if(e[j]> 0){  // positivo
+        for(int j=0;j<arregloentero5.length;j++){
+         if(arregloentero5[j]> 0){  // positivo
           positivo++;
-           }else if(e[j] < 0){  // negativo
+           }else if(arregloentero5[j] < 0){  // negativo
              negativo++;
             }else {  // cero
              cero++;
             }
         }
         // imprimir
-        imprimirInt(e);
+        imprimirInt(arregloentero5);
         System.out.println("-------------------------------------------------------------------------");
         System.out.println("Positivos: " + positivo);
         System.out.println("Negativos: " + negativo);
         System.out.println("Ceros: " + cero);
-        System.out.println("cantidad de elementos: " +cantidadElementos(e));
-        System.out.println("El mayor numero  es : "+mayorElemento(e));
-        System.out.println("El menor numero : "+menorElemento(e)) ;
+        System.out.println("cantidad de elementos: " +cantidadElementos(arregloentero5));
+        System.out.println("El mayor numero  es : "+mayorElemento(arregloentero5));
+        System.out.println("El menor numero : "+menorElemento(arregloentero5)) ;
         System.out.println("-------------------------------------------------------------------------");
          //
         crearArregloBooleano();
         //
-        float []  g= new float [10];
-        llenarfloat(g);
+        float []  arregglofltante10= new float [10];
+        llenarfloat(arregglofltante10);
         System.out.println("-------------------------------------------------------------------------");
-        imprimirFload(g);
-        System.out.println("la suma es : " +calcularSuma(g));
-        System.out.println("El promedio es : " +calcularPromedio(g));
+        imprimirFload(arregglofltante10);
+        System.out.println("la suma es : " +calcularSuma(arregglofltante10));
+        System.out.println("El promedio es : " +calcularPromedio(arregglofltante10));
 
         //
         System.out.println("-------------------------------------------------------------------------");
-        System.out.println("el valor ingresado esta en el arreglo entero :  "+estanum(e));
+        System.out.println("el valor ingresado esta en el arreglo entero :  "+estanumerico(arregloentero5));
         System.out.println("-------------------------------------------------------------------------");
     } // fin mnain
 
@@ -235,24 +234,18 @@ public static boolean hayVacantes(boolean [] arregloboolean){
    // Crear un método que reciba un arreglo de booleanos y
     // retorne true si y sólo si, todos los elementos son verdaderos.
    public static boolean todosVerdaderos(boolean [] arregloboolean){
-        int contador=0;
        for(int j=0;j<arregloboolean.length;j++){
-           if(arregloboolean[j] == true){
-               contador++;
+           if(arregloboolean[j] == false){
+               return false;
            }
        } // fin for
-
-       if(contador ==arregloboolean.length ){
-         return true;
-       }
-       return false;
+       return true;
    }
-
 
     //Crear un método reciba un arreglo de enteros por parámetro y
     // que solicite el ingreso de un valor.
     // Debe retornar true si y sólo si el valor ingresado por el usuario se encuentra en el arreglo.
-public static boolean estanum(int [] arregloInt){
+public static boolean estanumerico(int [] arregloInt){
     Scanner input = new Scanner(System.in);
     System.out.println("Ingrese un numero: ");
     int num = input.nextInt();
