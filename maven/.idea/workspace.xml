@@ -46,10 +46,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc4ec902-172d-435e-a1a9-cce1eccb596d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1bb41246-2f49-4738-9b5e-f93bbc11c07d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +75,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
   <component name="RunManager">
     <configuration name="MiEmpresa" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -140,10 +137,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="294" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1595470684303" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1595471648200">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1595472210075">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1595471648200" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1595472210075" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1595467981979">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
