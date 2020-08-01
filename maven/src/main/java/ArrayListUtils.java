@@ -3,7 +3,8 @@ public class ArrayListUtils {
     public static void imprimirListaEnteros(ArrayList<Integer> listaEnteros){
         if (listaEnteros.isEmpty()) {
             System.out.println("No hay numeros en la lista");
-        } else {
+        }
+        else {
             for (Integer num : listaEnteros){
                 System.out.println(num);
             }
@@ -13,13 +14,13 @@ public class ArrayListUtils {
     public static void imprimirListaString(ArrayList<String> listaStrings){
         if (listaStrings.isEmpty()) {
             System.out.println("Lista vacia");
-        } else {
+        }
+        else {
             for (String palabra : listaStrings){
                 System.out.println(palabra);
             }
         }
     }
-
 
 
 }

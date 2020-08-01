@@ -26,5 +26,4 @@ public class ArrayUtils {
         System.out.println("Promedio de alturas:"+promedio);
     }
 
-
 }

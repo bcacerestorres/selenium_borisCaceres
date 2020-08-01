@@ -4,35 +4,40 @@ public class Excepciones {
         System.out.println("Bienvenido al Programa!!");
         try {
             int num = JavaUtils.ingresarNumero("Ingrese un numero");
-              } catch (Exception a) {
+        }
+        catch (Exception ex) {
             System.out.println("Deberia haber ingresado un numero!!!");
-            System.out.println(a);
-              }
+            ex.getMessage();
+        }
        // Definir un arreglo de 3 posiciones y mostrar la posicion 3
         System.out.println("---------------------------------------------");
         int [] arreglo = new int[3];
         try {
             System.out.println(arreglo[3]);
-            } catch (Exception b){
+        }
+        catch (Exception ex){
             System.out.println("Esa posicion no existe en el arreglo!!");
-            System.out.println(b);
-            }
+            ex.getMessage();
+
+        }
        // Definir una variable double llamada promedio y realizar la siguiente operación: 3/0
         System.out.println("---------------------------------------------");
         try {
             float promedio = 3 / 0;
             System.out.println("El promedio es " + promedio);
-            } catch (Exception c) {
+        }
+        catch (Exception ex) {
             System.out.println("El promedio es 0!!!");
-            System.out.println(c);
-            }
+           ex.getMessage();
+        }
 
         System.out.println("---------------------------------------------");
         boolean esNumero = JavaUtils.validarEnteros("126");
         System.out.println(esNumero);
            if(esNumero == true){
                System.out.println("se valido y es numero");
-           }else {
+           }
+           else {
                System.out.println("se valido y no es numero");
            }
 
