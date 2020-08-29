@@ -1,0 +1,9 @@
+<suite name="Practi12_Test">
+    <test name ="Ejercicios">
+        <classes>
+        <parameter name="specificTag" value="h2"></parameter>
+            <class name="Practico12.testngSalesforce"/>
+        <class name="Practico12.spotifyTestWithParameters"/>
+        </classes>
+    </test>
+</suite>
