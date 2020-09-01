@@ -5,10 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import utilities.GetProperties;
 
 public class Ejercicio11_3 {
+    WebDriver driver;
     //Ejercicio
   //  Crear un método llamado spotifyByName
    // Ingresar al sitio: https://www.spotify.com/uy/signup/
@@ -22,14 +24,12 @@ public class Ejercicio11_3 {
         GetProperties properties = new GetProperties();
         String chromeDriverUrl = properties.getString("CHROMEDRIVER_PATH");
         System.setProperty("webdriver.chrome.driver", chromeDriverUrl);
-
-        WebDriver driver = new ChromeDriver();
-
+        driver = new ChromeDriver();
         driver.get(url);
         return driver;
     }
 
-    @Test
+    @Test (priority = 0)
     public void  spotifyByName(){
         WebDriver driver = getDriver("https://www.spotify.com/uy/signup/");
         driver.findElement(By.cssSelector("input[name='email']")).sendKeys("test123444emiliano@gmail.com");
@@ -47,11 +47,10 @@ public class Ejercicio11_3 {
 
         WebElement check = driver.findElement(By.cssSelector("div.signuppage__Signup-sof6g5-0.YsCoj:nth-child(6) form:nth-child(4) div.Group-sc-1lird8m-0.iNEHpO:nth-child(8) label.Checkbox-sc-1141y94-0.fRKYyx > span.Indicator-sc-11vkltc-0.hrjscC"));
         check.click();
-
     }
 
 
-    @Test
+    @Test (priority = 1)
     public void  spotifyByPlaceHolder(){
         WebDriver driver = getDriver("https://www.spotify.com/uy/signup/");
         driver.findElement(By.cssSelector("input[placeholder='Introduce tu correo electrónico.']")).sendKeys("test123444emiliano@gmail.com");
@@ -70,10 +69,12 @@ public class Ejercicio11_3 {
         WebElement check = driver.findElement(By.cssSelector("div.signuppage__Signup-sof6g5-0.YsCoj:nth-child(6) form:nth-child(4) div.Group-sc-1lird8m-0.iNEHpO:nth-child(8) label.Checkbox-sc-1141y94-0.fRKYyx > span.Indicator-sc-11vkltc-0.hrjscC"));
         check.click();
 
-        //  driver.findElement(By.cssSelector("div[role='presentation']")).click();
-        //  driver.findElement(By.xpath("//*[@id=\"__next\"]/main/div[2]/form/h2"));
-
     }
 
+    @AfterMethod
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
+        driver.quit();
+    }
 
 }

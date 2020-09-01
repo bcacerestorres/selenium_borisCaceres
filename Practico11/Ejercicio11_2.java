@@ -5,10 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import utilities.GetProperties;
 
 public class Ejercicio11_2 {
+    WebDriver driver;
    // Crear una clase llamada spotify_test
    //         Ejercicio
   //  Crear un método llamado spotifyByName
@@ -25,14 +27,14 @@ public class Ejercicio11_2 {
         String chromeDriverUrl = properties.getString("CHROMEDRIVER_PATH");
         System.setProperty("webdriver.chrome.driver", chromeDriverUrl);
 
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
         driver.get(url);
         return driver;
     }
 
-    @Test
-    public void spotifyByName(){
+    @Test (priority = 0)
+    public void spotifyByNameTest(){
         WebDriver driver = getDriver("https://www.spotify.com/uy/signup/");
         driver.findElement(By.xpath("//input[@name='email']")).sendKeys("testEmiliano112@gmail.com");
         driver.findElement(By.xpath("//input[@name='confirm']")).sendKeys("testEmiliano112@gmail.com");
@@ -52,8 +54,8 @@ public class Ejercicio11_2 {
         //driver.findElement(By.xpath("//*[@type=\"submit\"]")).click();
 
     }
-    @Test
-    public void spotifyByPlaceHolder (){
+    @Test (priority = 1)
+    public void spotifyByPlaceHolderTest(){
         WebDriver driver = getDriver("https://www.spotify.com/uy/signup/");
         driver.findElement(By.xpath("//input[@placeholder='Introduce tu correo electrónico.']")).sendKeys("test123444emiliano@gmail.com");
         driver.findElement(By.xpath("//input[@placeholder='Vuelve a introducir tu correo electrónico.']")).sendKeys("test123444emiliano@gmail.com");
@@ -70,8 +72,12 @@ public class Ejercicio11_2 {
 
         WebElement check = driver.findElement(By.xpath("//span[@class='Indicator-sc-11vkltc-0 hrjscC']"));
         check.click();
-
     }
 
+    @AfterMethod
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
+        driver.quit();
+    }
 
 }

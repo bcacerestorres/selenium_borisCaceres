@@ -5,12 +5,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import utilities.GetProperties;
 import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 
 public class Ejercicio11_4 {
+    WebDriver driver;
    // Acceder  a www.gmail.com
   //  Hacer click en “Acceder a tu cuenta en su lugar”
   //  Mostrar la cantidad de span que tiene
@@ -19,9 +21,7 @@ public class Ejercicio11_4 {
        GetProperties properties = new GetProperties();
        String chromeDriverUrl = properties.getString("CHROMEDRIVER_PATH");
        System.setProperty("webdriver.chrome.driver", chromeDriverUrl);
-
-       WebDriver driver = new ChromeDriver();
-
+        driver = new ChromeDriver();
        driver.get(url);
        return driver;
    }
@@ -31,10 +31,11 @@ public class Ejercicio11_4 {
        WebDriver driver = getDriver("https://www.gmail.com");
 
         driver.manage().window().maximize();
-
+       // email
        driver.findElement(By.cssSelector("input[name='identifier']")).sendKeys("bcacere53");
-
-        driver.findElement(By.xpath("//div[@class='VfPpkd-dgl2Hf-ppHlrf-sM5MNb']")).click();
+        // siguiente
+        //driver.findElement(By.xpath("//div[@class='VfPpkd-dgl2Hf-ppHlrf-sM5MNb']")).click();
+        driver.findElement(By.className("VfPpkd-RLmnJb")).click();
 
        WebElement mensaje=driver.findElement(By.xpath("//div[contains(text(),'Correo electrónico o teléfono')]"));
         System.out.println(""+mensaje.getText());
@@ -48,6 +49,10 @@ public class Ejercicio11_4 {
        }
         System.out.println("---------------------------------------------------------------------------");
    }
-
+    @AfterMethod
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
+        driver.quit();
+    }
 
 }

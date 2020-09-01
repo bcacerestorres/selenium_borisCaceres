@@ -4,10 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utilities.GetProperties;
 
 public class Ejercicio11_1 {
+    WebDriver driver;
   //  Crear una clase llamada docusign_test. Crear un método llamado setBaseURL() que cree una
    // instancia del driver y lo retorne usando el sitio “https://go.docusign.com/o/trial”
 
@@ -23,15 +26,13 @@ public class Ejercicio11_1 {
         GetProperties properties = new GetProperties();
         String chromeDriverUrl = properties.getString("CHROMEDRIVER_PATH");
         System.setProperty("webdriver.chrome.driver", chromeDriverUrl);
-
-        WebDriver driver = new ChromeDriver();
-
+        driver = new ChromeDriver();
         driver.get(url);
         return driver;
     }
 
-    @Test
-    public void completeDocusignRegistrationForm(){
+    @Test (priority = 0)
+    public void completeDocusignRegistrationFormTest(){
         WebDriver driver = getDriver("https://go.docusign.com/o/trial/");
         driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("Jhon");
         driver.findElement(By.xpath("//input[@name='last_name']")).sendKeys("Smith");
@@ -43,20 +44,26 @@ public class Ejercicio11_1 {
         industry.selectByValue("Education");
     }
 
-    @Test
-    public void defaultxPath(){
+    @Test (priority = 1)
+    public void defaultxPathTest(){
         WebDriver driver = getDriver("https://go.docusign.com/o/trial/");
         driver.findElement(By.xpath("//*[@id=\"dsFormLabel_First_Name\"]/input")).sendKeys("Alan");
         driver.findElement(By.xpath("//*[@id=\"dsFormLabel_Last_Name\"]/input")).sendKeys("Roth");
         driver.findElement(By.xpath("//*[@id=\"dsFormLabel_Email\"]/input")).sendKeys("test3333@test.net");
         // faltan campos phone, jobs ,industry
-        WebElement phone= driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/section[2]/div/div/div/div/div/div[2]/form/div[1]/label[4]/input"));
+        WebElement phone= driver.findElement(By.xpath("//input[@name='phone']"));
         phone.sendKeys("920010013");
 
-        WebElement job= driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/section[2]/div/div/div/div/div/div[2]/form/div[1]/label[5]/input"));
+        WebElement job= driver.findElement(By.xpath("//input[@name='title']"));
         job.sendKeys("Inge");
 
-        Select industria = new Select(driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/section[2]/div/div/div/div/div/div[2]/form/div[1]/label[6]/select")));
+        Select industria = new Select(driver.findElement(By.xpath("//select[@name='ds_industry']")));
         industria.selectByValue("Technology");
+    }
+
+    @AfterMethod
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
+        driver.quit();
     }
 }
