@@ -32,7 +32,7 @@ public class Ejercicio10_3 {
         return driver;
     }
     // provar si existe elemnto por id
-    private boolean existsElement(String id) {
+    private boolean existsElementById(String id) {
         try {
             driver.findElement(By.id(id));
         } catch (NoSuchElementException e) {
@@ -50,7 +50,7 @@ public class Ejercicio10_3 {
 
         driver.findElement(By.cssSelector("#u_0_2")).click();
 
-        boolean a= existsElement("u_1_6");
+        boolean a= existsElementById("u_1_6");
         System.out.print("el elemento existe " +a);
         System.out.print("\n");
 
@@ -73,8 +73,8 @@ public class Ejercicio10_3 {
     }
 
     @AfterTest
-    public void closedriver(){
-        driver.close();
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
         driver.quit();
     }
 
