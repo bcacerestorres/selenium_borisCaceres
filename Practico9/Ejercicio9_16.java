@@ -39,7 +39,7 @@ public class Ejercicio9_16 {
     }
 
     @Test
-    public void spotifyPagina(){
+    public void spotifyPaginaTest(){
         getDriver("https://www.spotify.com/uy/");
         driver.manage().window().maximize();
 
@@ -103,8 +103,8 @@ public class Ejercicio9_16 {
     }
 
     @AfterTest
-    public void closedriver(){
-        driver.close();
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
         driver.quit();
     }
 

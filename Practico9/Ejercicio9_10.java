@@ -25,7 +25,7 @@ public class Ejercicio9_10 {
     }
 
     @Test
-    public void searchInGoogle(){
+    public void searchInGoogleTest(){
         GetProperties properties = new GetProperties();
         String chromeDriverUrl = properties.getString("CHROMEDRIVER_PATH");
         System.setProperty("webdriver.chrome.driver", chromeDriverUrl);
@@ -38,8 +38,8 @@ public class Ejercicio9_10 {
     }
 
     @AfterTest
-    public void closedriver(){
-        driver.close();
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
         driver.quit();
     }
 
