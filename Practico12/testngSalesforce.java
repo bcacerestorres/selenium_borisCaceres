@@ -66,12 +66,14 @@ public class testngSalesforce {
         recordar.click();
          Boolean selecionado= recordar.isSelected();
 
-         if (selecionado) {
+             if (selecionado)
+             {
             System.out.println("Checkbox esta selecionada");
              }else
             {
             System.out.println("Checkbox no esta selecionadado");
              }
+
          Assert.assertTrue(selecionado);
 
     }
@@ -139,9 +141,7 @@ public class testngSalesforce {
     @AfterMethod
     public void closedriver() throws InterruptedException{
         Thread.sleep(5000);
-
       driver.quit();
-       driver.close();
     }
 
 }

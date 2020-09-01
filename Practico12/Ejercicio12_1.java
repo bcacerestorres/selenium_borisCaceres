@@ -16,15 +16,15 @@ public class Ejercicio12_1 {
     private final String DIFFERENT_EMAILS_ERROR_MSG = "Este correo electrónico no es válido. Asegúrate de que tenga un formato como este: ejemplo@email.com";
     private final String REGISTERED_EMAIL_ERROR_MSG = "Este correo electrónico ya está conectado a una cuenta. Inicia sesión.";
     private final String EMAIL_NOEQUALS="Las direcciones de correo electrónico no coinciden.";
-    private final String NOEMAIL="Es necesario que introduzcas tu correo electrónico.";
-    private final String NOCONFIRMACIONEMAIL="Es necesario que confirmes tu correo electrónico.";
-    private final String NOCONTRASEÑA="Debes introducir una contraseña.";
-    private final String NOPERFIL= "Introduce un nombre para tu perfil.";
-    private final String NODIA="Indica un día del mes válido.";
-    private final String NOMES ="Selecciona tu mes de nacimiento.";
-    private final String NOAÑO="Indica un año válido.";
-    private final String NOSEXO="Selecciona tu sexo.";
-    private final String NOROBOT="Confirma que no eres un robot.";
+    private final String NO_EMAIL="Es necesario que introduzcas tu correo electrónico.";
+    private final String NO_CONFIRMACION_EMAIL="Es necesario que confirmes tu correo electrónico.";
+    private final String NO_CONTRASEÑA="Debes introducir una contraseña.";
+    private final String NO_PERFIL= "Introduce un nombre para tu perfil.";
+    private final String NO_DIA="Indica un día del mes válido.";
+    private final String NO_MES ="Selecciona tu mes de nacimiento.";
+    private final String NO_AÑO="Indica un año válido.";
+    private final String NO_SEXO="Selecciona tu sexo.";
+    private final String NO_ROBOT="Confirma que no eres un robot.";
 
     //Ejercicio1
     //  Crear una clase llamada testngSpotify
@@ -114,7 +114,7 @@ public class Ejercicio12_1 {
   //Completar el email con uno invalido: “test@test,com”
   //Validar que se despliegue el error: “Lo sentimos, este correo ya está registrado.”
     @Test (priority = 3)
-    public void validateExistingEmail() throws InterruptedException {
+    public void validateExistingEmailTest() throws InterruptedException {
         driver.manage().window().maximize();
         // registrar
         driver.findElement(By.xpath("//a[contains(text(),'Registrarse')]")).click();
@@ -174,7 +174,7 @@ public class Ejercicio12_1 {
    // Validar que los mensajes de error sean desplegados en los campos obligatorios
    // Agregar variables estáticas para cada mensaje
     @Test (priority = 5)
-public void checkErrorMessages() throws InterruptedException{
+public void checkErrorMessagesTest() throws InterruptedException{
     driver.manage().window().maximize();
     // registrarse
     driver.findElement(By.xpath("//a[contains(text(),'Registrarse')]")).click();
@@ -190,10 +190,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no email  : "+emailNo.getText());
         System.out.print("\n");
-        System.out.print("variable existente no email : "+NOEMAIL);
+        System.out.print("variable existente no email : "+NO_EMAIL);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(emailNo.getText(),NOEMAIL);
+        Assert.assertEquals(emailNo.getText(),NO_EMAIL);
 
         // mensaje de no confirmacion email
         WebElement emailNoConfirmacion = driver.findElement(By.xpath("//*[contains(text(),'Es necesario que confirmes tu correo electrónico.')]"));
@@ -202,10 +202,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no confirmacion  email  : "+emailNoConfirmacion.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no confirmacion email : " +NOCONFIRMACIONEMAIL);
+        System.out.print("variable existente  no confirmacion email : " +NO_CONFIRMACION_EMAIL);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(emailNoConfirmacion.getText(),NOCONFIRMACIONEMAIL);
+        Assert.assertEquals(emailNoConfirmacion.getText(),NO_CONFIRMACION_EMAIL);
 
         //mensaje de  no contraseña
         WebElement emailNoContraseña = driver.findElement(By.xpath("//*[contains(text(),'Debes introducir una contraseña.')]"));
@@ -214,10 +214,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no contraseña  : "+emailNoContraseña.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no contraseña : " +NOCONTRASEÑA);
+        System.out.print("variable existente  no contraseña : " +NO_CONTRASEÑA);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(emailNoContraseña.getText(),NOCONTRASEÑA);
+        Assert.assertEquals(emailNoContraseña.getText(),NO_CONTRASEÑA);
 
         // mensaje de no nombre de perfil
         WebElement NoPerfil = driver.findElement(By.xpath("//*[contains(text(),'Introduce un nombre para tu perfil.')]"));
@@ -226,10 +226,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no perfil  : "+NoPerfil.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no perfil : " +NOPERFIL);
+        System.out.print("variable existente  no perfil : " +NO_PERFIL);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(NoPerfil.getText(),NOPERFIL);
+        Assert.assertEquals(NoPerfil.getText(),NO_PERFIL);
 
         // mensaje de no dia
         WebElement NoDia = driver.findElement(By.xpath("//*[contains(text(),'Indica un día del mes válido.')]"));
@@ -238,10 +238,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no dia  : "+NoDia.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no dia : " +NODIA);
+        System.out.print("variable existente  no dia : " +NO_DIA);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(NoDia.getText(),NODIA);
+        Assert.assertEquals(NoDia.getText(),NO_DIA);
 
         // mensaje de no mes
         WebElement NoMes = driver.findElement(By.xpath("//*[contains(text(),'Selecciona tu mes de nacimiento.')]"));
@@ -250,10 +250,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no mes   : "+NoMes.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no mes: " +NOMES);
+        System.out.print("variable existente  no mes: " +NO_MES);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(NoMes.getText(),NOMES);
+        Assert.assertEquals(NoMes.getText(),NO_MES);
 
         // menssaje de no año
         WebElement NoAño = driver.findElement(By.xpath("//*[contains(text(),'Indica un año válido.')]"));
@@ -262,10 +262,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no año: "+NoAño.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no año : " +NOAÑO);
+        System.out.print("variable existente  no año : " +NO_AÑO);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(NoAño.getText(),NOAÑO);
+        Assert.assertEquals(NoAño.getText(),NO_AÑO);
         //mensaje de no sexo
         WebElement NoSexo = driver.findElement(By.xpath("//*[contains(text(),'Selecciona tu sexo.')]"));
 
@@ -273,10 +273,10 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no sexo  : "+NoSexo.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no sexo : " +NOSEXO);
+        System.out.print("variable existente  no sexo : " +NO_SEXO);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(NoSexo.getText(),NOSEXO);
+        Assert.assertEquals(NoSexo.getText(),NO_SEXO);
 
         // mensaje de que no eres un robot
         WebElement NoRobot = driver.findElement(By.xpath("//*[contains(text(),'Confirma que no eres un robot.')]"));
@@ -285,16 +285,16 @@ public void checkErrorMessages() throws InterruptedException{
         System.out.print("\n");
         System.out.print("elemento no robot  : "+NoRobot.getText());
         System.out.print("\n");
-        System.out.print("variable existente  no robot : " +NOROBOT);
+        System.out.print("variable existente  no robot : " +NO_ROBOT);
         System.out.print("\n");
         System.out.print("---------------------------------------------------------------------------------------");
-        Assert.assertEquals(NoRobot.getText(),NOROBOT);
+        Assert.assertEquals(NoRobot.getText(),NO_ROBOT);
     }
 
     @AfterMethod
-    public void closedriver(){
+    public void closedriver() throws InterruptedException{
+        Thread.sleep(5000);
         driver.quit();
-        driver.close();
     }
 
 }
