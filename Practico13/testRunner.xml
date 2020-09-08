@@ -1,0 +1,8 @@
+<suite name="Practi13_Test">
+    <test name ="Ejercicios">
+        <classes>
+            <class name="Practico13.Esperas"/>
+            <class name="Practico13.WaitsExplicitos"/>
+        </classes>
+    </test>
+</suite>

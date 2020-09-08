@@ -1,0 +1,8 @@
+<suite name="Practi13_Test">
+    <test name ="Parametros">
+        <classes>
+            <parameter name="tagName" value="h1"></parameter>
+            <class name="Practico13.testParametrizables"/>
+        </classes>
+    </test>
+</suite>
