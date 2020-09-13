@@ -1,0 +1,13 @@
+<suite name="grupo_test">
+    <test name="grupo_ejecucion ">
+        <groups>
+            <run>
+            <include name="exitoso"/>
+                <include name="fallido"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Practico14.TestGroup"></class>
+        </classes>
+    </test>
+</suite>
