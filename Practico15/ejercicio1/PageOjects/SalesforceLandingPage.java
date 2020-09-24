@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.concurrent.TimeUnit;
 
 public class SalesforceLandingPage {
@@ -35,39 +34,40 @@ public class SalesforceLandingPage {
     // use custom domain
     public String UseCustomDomain(){
     //  boton custom domain
-    driver.findElement(By.id("mydomainLink")).click();
-    //ingreso de caracter
-    driver.findElement(By.id("mydomain")).sendKeys("as");
-    // boton continuar
-    driver.findElement(By.name("Continue")).click();
+        driver.findElement(By.id("mydomainLink")).click();
+        //ingreso de caracter
+        driver.findElement(By.id("mydomain")).sendKeys("as");
+        // boton continuar
+        driver.findElement(By.name("Continue")).click();
 
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    // texto inciar sesion
-     WebElement inicarsesion= driver.findElement(By.xpath("//h2[@class='okta-form-title o-form-head']"));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        // texto inciar sesion
+        WebElement inicarsesion= driver.findElement(By.xpath("//h2[@class='okta-form-title o-form-head']"));
 
         return inicarsesion.getText() ;
     }
+
     // forgot your password
     public  String ForgotYourPassword(){
-     // boton
-     driver.findElement(By.id("forgot_password_link")).click();
-     //username
-     driver.findElement(By.id("un")).sendKeys("abc");
-     // cancelar
-     driver.findElement(By.linkText("Cancel")).click();
+       // boton
+       driver.findElement(By.id("forgot_password_link")).click();
+       //username
+        driver.findElement(By.id("un")).sendKeys("abc");
+        // cancelar
+        driver.findElement(By.linkText("Cancel")).click();
 
-     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-     // not a customer
-     WebElement Nocustomer=driver.findElement(By.xpath("//p[@class='di mr16']"));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        // not a customer
+        WebElement Nocustomer=driver.findElement(By.xpath("//p[@class='di mr16']"));
 
-      return Nocustomer.getText();
+        return Nocustomer.getText();
     }
 
     // try for free
    public void tryforfree(){
         // boton try for fre
-   driver.findElement(By.id("signup_link")).click();
-// espera de 10 segundos
+        driver.findElement(By.id("signup_link")).click();
+        // espera de 10 segundos
        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
        // variables
        Faker faker = new Faker();
