@@ -1,0 +1,14 @@
+<suite name="grupo_test">
+    <test name="grupo_ejecucion ">
+        <groups>
+            <run>
+                <include name="grupo1"/>
+                <include name="grupo2"/>
+            </run>
+        </groups>
+        <classes>
+            <parameter name="menu" value="1"></parameter>
+            <class name="Integracion1.TestIntegracion.TestIntegracion"></class>
+        </classes>
+    </test>
+</suite>
