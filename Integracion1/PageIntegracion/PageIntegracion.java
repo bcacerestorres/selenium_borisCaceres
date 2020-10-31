@@ -55,6 +55,7 @@ public class PageIntegracion {
 
     // boton new  1
     public void EnlaceNew(){
+
         driver.findElement(By.linkText("News")).click();
     }
 
@@ -93,18 +94,17 @@ public class PageIntegracion {
       WebElement element= driver.findElement(By.xpath("//body/div[@id='orbit-container-full-height']/div[@id='orb-modules']/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[3]/fieldset[1]/div[1]/a[1]"));
         JavascriptExecutor jse =(JavascriptExecutor)driver;
         jse.executeScript("arguments[0].click()", element);
-     //   Actions action = new Actions(driver);
-      //  action.moveToElement(element).click().perform();
        element.click();
     }
     // mensaje sory
-    public String sorry(){
+    public String Mensajesorry(){
         WebElement mensaje= driver.findElement(By.xpath("//span[contains(text(),'Sorry, only 16s and over can register outside the ')]"));
         return mensaje.getText();
     }
 
     // boton ok
-    public void ok(){
+    // JavascriptExecutor es una interfaz qe ayuda a ejecutar java script
+    public void Bontonok(){
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         WebElement boton = driver.findElement(By.xpath("//body/div[@id='orbit-container-full-height']/div[@id='orb-modules']/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/a[1]"));
         JavascriptExecutor jse =(JavascriptExecutor)driver;
@@ -114,12 +114,6 @@ public class PageIntegracion {
 
     //boton 16 or over
     public void Over16(){
-     //   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-// espera de 10 segundos
-    //By.xpath("//a/span[contains(text(),'16 or over')]")
-        //By.xpath("//a//span[contains(text(),'16 or over')]")
-        // By.xpath("//body/div[@id='orbit-container-full-height']/div[@id='orb-modules']/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[3]/fieldset[1]/div[1]/a[2]")
-
     WebDriverWait myWaitVar = new WebDriverWait(driver, 30);
      myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a//span[contains(text(),'16 or over')]")));
 
@@ -127,6 +121,7 @@ public class PageIntegracion {
         JavascriptExecutor jse =(JavascriptExecutor)driver;
         jse.executeScript("arguments[0].click()",elemento);
 
+        //para hacer click sobre el boton , ya que aveces indica que el elemento no esta presente
           try {
               elemento.click();
           }
@@ -175,8 +170,8 @@ public class PageIntegracion {
     // mensaje de sory birth
 
     public String sorryFecha(){
-        WebElement mensajefecha = driver.findElement(By.xpath("//span[contains(text(),'Sorry, you need to be 16 or over.')]"));
-        return mensajefecha.getText();
+        WebElement mensajeFecha = driver.findElement(By.xpath("//span[contains(text(),'Sorry, you need to be 16 or over.')]"));
+        return mensajeFecha.getText();
     }
 
     // completar fecha 15/2/2000

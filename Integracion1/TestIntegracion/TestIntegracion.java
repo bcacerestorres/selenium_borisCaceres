@@ -21,6 +21,8 @@ public class TestIntegracion {
         String chromeDriverUrl = properties.getString("CHROMEDRIVER_PATH");
         System.setProperty("webdriver.chrome.driver", chromeDriverUrl);
         driver = new ChromeDriver();
+        //  package Practico14 , public class Constans
+        // public static String BBC_URL="https://www.bbc.com";
         driver.get(Constans.BBC_URL);
         // maximizar
         driver.manage().window().maximize();
@@ -42,28 +44,28 @@ public class TestIntegracion {
     public void escenario1 (){
    // titulo de la pagina
         System.out.println("---------------------------titulo pagina original-------------------------------------------\n");
-     String Tituloactual=driver.getTitle();
-     System.out.println(Tituloactual);
-     String Tituloesperado="BBC - Homepage";
-     Assert.assertEquals(Tituloactual,Tituloesperado);
+     String tituloActual=driver.getTitle();
+     System.out.println(tituloActual);
+     String Tituloesperado= Constans.TITULO;
+     Assert.assertEquals(tituloActual,Tituloesperado);
 
      PageIntegracion.h1Test();
      PageIntegracion.aTest();
 
       PageIntegracion.EnlaceNew();
       System.out.println("----------------------------titulo pagina new------------------------------------------\n");
-      String Newactual= driver.getTitle();
-      System.out.println(Newactual);
-      String Newesperado="Home - BBC News";
-      Assert.assertEquals(Newactual,Newesperado);
+      String newActual= driver.getTitle();
+      System.out.println(newActual);
+      String newEsperado= Constans.TITULO_NEW;
+      Assert.assertEquals(newActual,newEsperado);
       System.out.println("----------------------------------------------------------------------\n");
 
         System.out.println("----------------------------------titulo pagina register------------------------------------\n");
         PageIntegracion.Registernow();
-        String Registeractual= driver.getTitle();
-        System.out.println(Registeractual);
-        String Registeresperado="BBC – Sign in";
-        Assert.assertEquals(Registeractual,Registeresperado);
+        String registerActual= driver.getTitle();
+        System.out.println(registerActual);
+        String regiserEsperado= Constans.TITULO_SIGN;
+        Assert.assertEquals(registerActual,regiserEsperado);
         System.out.println("----------------------------------------------------------------------\n");
 
     }
@@ -87,35 +89,35 @@ public void escenario2(@Optional("2") int op){
             System.out.print("opciones del menu : New \n");
             PageIntegracion.EnlaceNew();
             System.out.println("Url :"+driver.getCurrentUrl());
-            String urlEsperadonew="https://www.bbc.com/news";
+            String urlEsperadonew=Constans.BBC_URL_NEW;
             Assert.assertEquals(driver.getCurrentUrl(),urlEsperadonew);
 
         }else if(op == 3){
             System.out.print("opciones del menu : Reel \n");
             PageIntegracion.EnlaceReel();
             System.out.println("Url :"+driver.getCurrentUrl());
-           String urlEsperadoreel="https://www.bbc.com/reel";
+           String urlEsperadoreel=Constans.BBC_URL_REEL;
             Assert.assertEquals(driver.getCurrentUrl(),urlEsperadoreel);
 
         }else if(op == 4){
             System.out.print("opciones del menu : Worklife \n");
             PageIntegracion.EnlaceWorklife();
             System.out.println("Url :"+driver.getCurrentUrl());
-            String urlEsperadowork="https://www.bbc.com/worklife/?referer=https%3A%2F%2Fwww.bbc.com%2F";
+            String urlEsperadowork=Constans.BBC_URL_WORKLIFE;
             Assert.assertEquals(driver.getCurrentUrl(),urlEsperadowork);
 
         }else if(op == 5){
             System.out.print("opciones del menu : Travel \n");
             PageIntegracion.EnlaceTravel();
             System.out.println("Url :"+driver.getCurrentUrl());
-            String urlEsperadotravel="http://www.bbc.com/travel?referer=https%3A%2F%2Fwww.bbc.com%2F";
+            String urlEsperadotravel= Constans.BBC_URL_TRAVEL;
            Assert.assertEquals(driver.getCurrentUrl(),urlEsperadotravel);
 
         }else {
             System.out.print("opciones del menu : Sport \n");
             PageIntegracion.EnlaceSport();
             System.out.println("Url :"+driver.getCurrentUrl());
-            String urlEsperadosport="https://www.bbc.com/sport";
+            String urlEsperadosport= Constans.BBC_URL_SPORT;
             Assert.assertEquals(driver.getCurrentUrl(),urlEsperadosport);
         }
 
@@ -132,11 +134,11 @@ public void escenario3(){
     PageIntegracion.Registernow();
     PageIntegracion.under16();
 
-   String mensajeUnder = PageIntegracion.sorry();
-   String esperado="Sorry, only 16s and over can register outside the UK";
+   String mensajeUnder = PageIntegracion.Mensajesorry();
+   String esperado= Constans.MENSAJE_SORRY;
    Assert.assertEquals(mensajeUnder,esperado);
 
-   PageIntegracion.ok();
+   PageIntegracion.Bontonok();
 
    Assert.assertEquals(driver.getCurrentUrl(),Constans.BBC_URL);
 
@@ -157,7 +159,7 @@ public void escenario4(){
     PageIntegracion.mes();
     PageIntegracion.continuar();
     String mensajeBirth = PageIntegracion.Nomes();
-    String esperadoBirth="Oops, that date doesn't look right. Make sure it's a real date written as DD-MM-YYYY e.g. the 5th of June 2009 is 05-06-2009.";
+    String esperadoBirth= Constans.MENSAJE_BIRTH;
     Assert.assertEquals(mensajeBirth,esperadoBirth);
 }
    // Escenario 5
@@ -176,7 +178,7 @@ public void escenario5(){
     PageIntegracion.botonContinuar();
 
     String mensajeFecha= PageIntegracion.sorryFecha();
-    String esperado="Sorry, you need to be 16 or over.";
+    String esperado= Constans.MENSAJE_OVER;
     Assert.assertEquals(mensajeFecha,esperado);
 
 }
@@ -221,6 +223,6 @@ public void escenario7(String mail , String clave){
     @AfterMethod
     public void close() throws InterruptedException{
         Thread.sleep(5000);
-       // driver.quit();
+        driver.quit();
     }
 }
