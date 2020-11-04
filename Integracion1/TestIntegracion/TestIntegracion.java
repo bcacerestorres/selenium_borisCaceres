@@ -46,8 +46,8 @@ public class TestIntegracion {
         System.out.println("---------------------------titulo pagina original-------------------------------------------\n");
      String tituloActual=driver.getTitle();
      System.out.println(tituloActual);
-     String Tituloesperado= Constans.TITULO;
-     Assert.assertEquals(tituloActual,Tituloesperado);
+     String tituloEsperado= Constans.TITULO;
+     Assert.assertEquals(tituloActual,tituloEsperado);
 
      PageIntegracion.h1Test();
      PageIntegracion.aTest();
@@ -56,7 +56,7 @@ public class TestIntegracion {
       System.out.println("----------------------------titulo pagina new------------------------------------------\n");
       String newActual= driver.getTitle();
       System.out.println(newActual);
-      String newEsperado= Constans.TITULO_NEW;
+      String newEsperado=Constans.TITULO_NEW;
       Assert.assertEquals(newActual,newEsperado);
       System.out.println("----------------------------------------------------------------------\n");
 
@@ -134,11 +134,11 @@ public void escenario3(){
     PageIntegracion.Registernow();
     PageIntegracion.under16();
 
-   String mensajeUnder = PageIntegracion.Mensajesorry();
+   String mensajeUnder = PageIntegracion.mensajeSorry();
    String esperado= Constans.MENSAJE_SORRY;
    Assert.assertEquals(mensajeUnder,esperado);
 
-   PageIntegracion.Bontonok();
+   PageIntegracion.bontonOk();
 
    Assert.assertEquals(driver.getCurrentUrl(),Constans.BBC_URL);
 

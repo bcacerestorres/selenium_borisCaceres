@@ -97,14 +97,14 @@ public class PageIntegracion {
        element.click();
     }
     // mensaje sory
-    public String Mensajesorry(){
+    public String mensajeSorry(){
         WebElement mensaje= driver.findElement(By.xpath("//span[contains(text(),'Sorry, only 16s and over can register outside the ')]"));
         return mensaje.getText();
     }
 
     // boton ok
     // JavascriptExecutor es una interfaz qe ayuda a ejecutar java script
-    public void Bontonok(){
+    public void bontonOk(){
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         WebElement boton = driver.findElement(By.xpath("//body/div[@id='orbit-container-full-height']/div[@id='orb-modules']/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/a[1]"));
         JavascriptExecutor jse =(JavascriptExecutor)driver;
