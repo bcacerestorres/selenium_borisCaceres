@@ -197,7 +197,7 @@ public void escenario6(){
 
     PageIntegracion.completarfecha2();
     PageIntegracion.botonContinuar();
-    PageIntegracion.Datos();
+    PageIntegracion.datosFormulario();
 
 }
    // Escenario 7

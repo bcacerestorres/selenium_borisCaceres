@@ -89,7 +89,7 @@ public class PageIntegracion {
     // boton under 16
     public void under16(){
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
+        // esa expresion me permitio identificador el elemento
       //  WebElement element = driver.findElement(By.xpath("//a[@class='button' and @data-bbc-result='/register/details/guardian']"));
       WebElement element= driver.findElement(By.xpath("//body/div[@id='orbit-container-full-height']/div[@id='orb-modules']/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/div[3]/fieldset[1]/div[1]/a[1]"));
         JavascriptExecutor jse =(JavascriptExecutor)driver;
@@ -103,7 +103,8 @@ public class PageIntegracion {
     }
 
     // boton ok
-    // JavascriptExecutor es una interfaz qe ayuda a ejecutar java script
+    // JavascriptExecutor es una interfaz que ayuda a ejecutar java script
+    // faltaba tiempo para el elemento aparesca
     public void bontonOk(){
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         WebElement boton = driver.findElement(By.xpath("//body/div[@id='orbit-container-full-height']/div[@id='orb-modules']/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[1]/a[1]"));
@@ -113,6 +114,7 @@ public class PageIntegracion {
     }
 
     //boton 16 or over
+    // faltaba tiempo para el elemento aparesca
     public void Over16(){
     WebDriverWait myWaitVar = new WebDriverWait(driver, 30);
      myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a//span[contains(text(),'16 or over')]")));
@@ -182,7 +184,7 @@ public class PageIntegracion {
     }
 
     // comletar correo , passwor , pais
-    public void Datos(){
+    public void datosFormulario(){
      driver.findElement(By.cssSelector("#user-identifier-input")).sendKeys("test@test.com");
      driver.findElement(By.cssSelector("#password-input")).sendKeys("holamundo123");
 
