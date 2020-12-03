@@ -111,6 +111,11 @@ public class TestIntegracion2 {
         Assert.assertEquals(mensajeCostos,esperadoCostos);
 
    }
+   //import Practico14.DataProviderPeople;
+   //@DataProvider(name = "cuentas")
+   //    public Object[][]Cuentas(){
+   //        return new Object[][]{{"asd@asda.com","3669"},{"luis.aberto@yahoo.es","sgdf22"},{"figo2323@hotmail.com","5..65"}};
+   //    }
     @Test(groups ="registration",dataProviderClass =DataProviderPeople .class,dataProvider= "cuentas")
    public void escenario5(String mail , String clave){
         PageIntegracion2.botonMyacount();
