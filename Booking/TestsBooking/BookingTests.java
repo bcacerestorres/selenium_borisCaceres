@@ -13,6 +13,7 @@ public class BookingTests extends BaseBookingTest  {
         System.out.println(titulo);
    Assert.assertEquals(titulo,"Booking.com | Web oficial | Los mejores hoteles y alojamientos");
     }
+
     @Test
     public void mostarLinksTest(){
      BookingPage.obtenerEnlace();

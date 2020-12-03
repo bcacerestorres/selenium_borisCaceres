@@ -1,6 +1,7 @@
 package Booking.TestsBooking;
 import Practico14.Constans;
 import Booking.PageObjetcs.BookingPage;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -25,6 +26,8 @@ public class BaseBookingTest {
         driver.manage().window().maximize();
         // metodo de espera implicito
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        // iniciar el driver
+        BookingPage = new BookingPage(driver);
     }
     @AfterMethod
     public void close() throws InterruptedException{

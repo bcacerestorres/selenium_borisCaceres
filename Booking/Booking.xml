@@ -2,7 +2,7 @@
 
     <test name = "pruebas" >
         <classes>
-            <class name = "Booking.TestsBooking.BaseBookingTest"></class>
+            <class name = "Booking.TestsBooking.TesBooking"></class>
 
         </classes>
 
