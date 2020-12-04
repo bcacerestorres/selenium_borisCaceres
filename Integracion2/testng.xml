@@ -1,0 +1,14 @@
+<suite name="grupo_test">
+    <test name="integracion2">
+        <groups>
+            <run>
+                <include name="registration"/>
+                <include name="purchase"/>
+            </run>
+        </groups>
+        <classes>
+            <parameter name="menu" value="1"></parameter>
+            <class name="Integracion2.TestIntegracion2.TestIntegracion2"></class>
+        </classes>
+    </test>
+</suite>

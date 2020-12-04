@@ -1,0 +1,69 @@
+-- html
+<a 
+history="[object Object]" 
+match="[object Object]"
+ staticcontext="[object Object]" 
+ data-bbc-container="register"
+ data-bbc-source="responsive_web" 
+ data-bbc-type="link" 
+ data-bbc-result="/register/details/guardian" 
+ data-bbc-ignore-views="1" 
+ href="/register/details/guardian?action=register&amp;context=homepage&amp;isCasso=false&amp;lang=es-005&amp;nonce=se5Qr8Iy-TPPx4GmRtWHib09SQVM80DLg0RQ&amp;ptrt=https%3A%2F%2Fwww.bbc.com%2F&amp;redirectUri=https%3A%2F%2Fsession.bbc.com%2Fsession%2Fcallback&amp;service=IdSignInService&amp;userOrigin=HOMEPAGE_GNL" 
+ class="button" 
+ xpath="1">
+ <span>Under 16</span>
+ </a>
+ 
+ //a[@class='button' and @data-bbc-result='/register/details/guardian']
+ 
+<a 
+history="[object Object]" 
+match="[object Object]" 
+staticcontext="[object Object]"
+ data-bbc-container="register" 
+ data-bbc-source="responsive_web" 
+ data-bbc-type="link" 
+ data-bbc-result="/register/details/age"
+ data-bbc-ignore-views="1" 
+ href="/register/details/age?action=register&amp;context=homepage&amp;isCasso=false&amp;lang=es-005&amp;nonce=mSg6un53-5iFhCC1iRhK3RxlXnJ_FQZJ17oo&amp;ptrt=https%3A%2F%2Fwww.bbc.com%2F&amp;redirectUri=https%3A%2F%2Fsession.bbc.com%2Fsession%2Fcallback&amp;service=IdSignInService&amp;userOrigin=HOMEPAGE_GNL"
+ class="button" 
+ xpath="1">
+ <span>16 or over</span></a>
+ 
+
+ 
+ <a 
+ aria-label="Continuar" 
+ data-test-locator="return-to-ptrt" 
+ history="[object Object]" 
+ match="[object Object]" 
+ staticcontext="[object Object]"
+ data-bbc-container="register"
+ data-bbc-source="responsive_web"
+ data-bbc-type="link"
+ data-bbc-result="/"
+ data-bbc-ignore-views="1" 
+ href="https://www.bbc.com/" 
+ class="button button--full-width u-margin-top-triple"
+ xpath="1">
+ <span>OK</span>
+ </a>
+ 
+-- xpath
+  //a/span[contains(text(),'16 or over')]
+  //a/span[contains(text(),'OK')]
+  p a[@contains(text(),'OK')]
+  -- css selector
+  a
+  
+  
+  // error1
+   org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span>...</span>
+   is not clickable at point (485, 296). Other element would receive the click: <div class="spinner spinner--fill"></div>
+   
+   org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span>...</span> 
+   is not clickable at point (257, 296). Other element would receive the click: <div class="spinner spinner--fill"></div>
+   
+   //error 2
+    org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+   
