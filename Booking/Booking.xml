@@ -1,0 +1,11 @@
+<suite name ="prueba-selelium">
+
+    <test name = "pruebas" >
+        <classes>
+            <class name = "Booking.TestsBooking.TesBooking"></class>
+
+        </classes>
+
+    </test>
+
+</suite>
