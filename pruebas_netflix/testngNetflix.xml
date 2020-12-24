@@ -1,0 +1,13 @@
+<suite name="test_netflix" verbose="1">
+    <test name="netflix">
+        <groups>
+            <run>
+                <include name="exito"/>
+                <include name="fallo"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="pruebas_netflix.TestNetflix.TestNetflix"></class>
+        </classes>
+    </test>
+</suite>
