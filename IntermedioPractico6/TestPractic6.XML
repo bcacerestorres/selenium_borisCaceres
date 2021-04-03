@@ -1,0 +1,11 @@
+<suite name ="Practico 6 - Booking.PageObjetcs.Tests">
+
+    <test name = "Ejercicios" >
+        <classes>
+            <class name = "Practico16.Tests.DocusignTest"></class>
+
+        </classes>
+
+    </test>
+
+</suite>
