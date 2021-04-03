@@ -120,71 +120,104 @@ public class MyAccountPage {
         searchButton.click();
     }
 
-   public void  comprarVestido(){}
-    WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
 
-    // waiting for the Search page
-    wait.until(ExpectedConditions.titleContains("Search"));
+   public void  selecionarVestido(){
+       WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+
+       // waiting for the Search page
+       wait.until(ExpectedConditions.titleContains("Search"));
+
+       //accesing and storing the link of the desired result, in this case the 0 corresponding to the Printed Summer Dress
+       String productLink = allTheProducts.get(0).findElement(By.cssSelector("div.product-container a.product_img_link")).getAttribute("href");
+
+       //going to the product page
+       driver.get(productLink);
+
+   }
+
+ public void cartButton() {
+     WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+     //waiting for the add to cart button to be clickable
+     wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[name='Submit']")));
+     submitName.click();
+
+    }
+
+    public void modaltoOpen () {
+        WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+        //waiting for the modal to open and then clicking on Proceed to checkout
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("layer_cart")));
+        aTitle.click();
+
+    }
+
+    public void checkoutPage () {
+        WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+
+        //waiting to land the checkout page and checking if the cart has products because the div#order-detail-content only appears when products are in the cart
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("order-detail-content")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("p a[title='Proceed to checkout']")));
+
+        //going to the address section
+        paTitle.click();
+    }
+
+    public void addressBox() {
+        WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+
+        //waiting for the address box to be displayed
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("address_delivery")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[name='processAddress']")));
+
+        //going to the shipping section and agreeing to the terms
+        ButtonProcessAdress.click();
+    }
+
+    public void orderCarrier () {
+        WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("order_carrier_content")));
+        cgv.click();
+    }
+
+    public void  paymentSection() {
+        WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+
+        //going to the payment section
+        processCarrier.click();
+
+        //checking if the payment methods are present, this is easy, just check if the div container is being displayed
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("HOOK_PAYMENT")));
+
+    }
+ public void bankwireOption() {
+     WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
+
+     //selecting the bankwire option
+     wait.until(ExpectedConditions.elementToBeClickable(By.className("bankwire")));
+     bankwire.click();
+  }
 
 
-    //accesing and storing the link of the desired result, in this case the 0 corresponding to the Printed Summer Dress
-    String productLink = allTheProducts.get(0).findElement(By.cssSelector("div.product-container a.product_img_link")).getAttribute("href");
+   public String confirmingOrder() {
+       WebDriverWait wait = new WebDriverWait(driver, TimeUnit.SECONDS.toSeconds(10));
 
-    //going to the product page
-    driver.get(productLink);
+       //checking if we selected the payment method correctly
+       //  System.out.println(driver.findElement(By.className("page-subheading")).getText());
+       System.out.println("------------------------------------------------\n");
+       System.out.println(subheading.getText());
+       System.out.println("------------------------------------------------\n");
+       wait.until(ExpectedConditions.textToBePresentInElementLocated(By.className("page-subheading"), "BANK-WIRE PAYMENT."));
+       System.out.println("------------------------------------------------\n");
 
-    //waiting for the add to cart button to be clickable
-    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[name='Submit']")));
-    submitName.click();
+       //confirming order by clicking on the Confirm Order button
+       // driver.findElement(By.cssSelector("#cart_navigation button")).click();
+       navigation.click();
+       wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("cheque-indent")));
+       System.out.println("------------------------------------------------\n");
+       System.out.println(buyDetailsBox.getText());
+       System.out.println("------------------------------------------------\n");
+     return  buyDetailsBox.getText();
+   }
 
-    //waiting for the modal to open and then clicking on Proceed to checkout
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("layer_cart")));
-    aTitle.click();
-
-    //waiting to land the checkout page and checking if the cart has products because the div#order-detail-content only appears when products are in the cart
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("order-detail-content")));
-    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("p a[title='Proceed to checkout']")));
-
-    //going to the address section
-   paTitle.click();
-
-    //waiting for the address box to be displayed
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("address_delivery")));
-    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[name='processAddress']")));
-
-    //going to the shipping section and agreeing to the terms
-     ButtonProcessAdress.click();
-
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("order_carrier_content")));
-     cgv.click();
-
-
-    //going to the payment section
-   processCarrier.click();
-
-    //checking if the payment methods are present, this is easy, just check if the div container is being displayed
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("HOOK_PAYMENT")));
-
-    //selecting the bankwire option
-    wait.until(ExpectedConditions.elementToBeClickable(By.className("bankwire")));
-   bankwire.click();
-
-    //checking if we selected the payment method correctly
-    //  System.out.println(driver.findElement(By.className("page-subheading")).getText());
-      System.out.println(subheading.getText());
-    wait.until(ExpectedConditions.textToBePresentInElementLocated(By.className("page-subheading"), "BANK-WIRE PAYMENT."));
-
-//confirming order by clicking on the Confirm Order button
-    // driver.findElement(By.cssSelector("#cart_navigation button")).click();
-    navigation.click();
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("cheque-indent")));
-
-    //assertions
-    Assert.assertTrue(buyDetailsBox.getText().contains("Your order on My Store is complete"));
-    Assert.assertTrue(buyDetailsBox.getText().contains("$30.98"));
-    Assert.assertTrue(buyDetailsBox.getText().contains("Name of account owner Pradeep Macharla"));
-    Assert.assertTrue(buyDetailsBox.getText().contains("Include these details xyz"));
-    Assert.assertTrue(buyDetailsBox.getText().contains("Bank name RTP"));
-    Assert.assertTrue(buyDetailsBox.getText().contains("Your order will be sent as soon as we receive payment"));
- 
 }
