@@ -16,17 +16,17 @@ public class PaginaRegistro {
     //metodo de ingreso de correo vacio
     public void correoVacio(){
      //   mail  by id, name es  email
-     WebElement vacio= driver.findElement(By.id("email"));
-     vacio.sendKeys("");
-     vacio.sendKeys(Keys.ENTER);
+     WebElement CampoCorreo= driver.findElement(By.id("email"));
+     CampoCorreo.sendKeys("");
+     CampoCorreo.sendKeys(Keys.ENTER);
     }
 
     public String  MensajeVacio(){
         // xpath //span[@class='LinkContainer-sc-1t58wcv-0 gUjKMh']
-        WebElement mensacevacio= driver.findElement(By.xpath("//span[@class='LinkContainer-sc-1t58wcv-0 gUjKMh']"));
-       System.out.println(mensacevacio);
-        System.out.println(mensacevacio.getText());
-        return  mensacevacio.getText();
+        WebElement Etiquetavacio= driver.findElement(By.xpath("//span[@class='LinkContainer-sc-1t58wcv-0 gUjKMh']"));
+     //  System.out.println(Etiquetavacio);
+        System.out.println(Etiquetavacio.getText());
+        return  Etiquetavacio.getText();
     }
 
     //metodo de ingreso de correo ffff

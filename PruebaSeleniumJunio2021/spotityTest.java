@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 import PruebaSeleniumJunio2021.PageObject.PaginaPrincipal;
 import  PruebaSeleniumJunio2021.PageObject.PaginaPremiun;
 import  PruebaSeleniumJunio2021.PageObject.PaginaRegistro;
+import  PruebaSeleniumJunio2021.PageObject.PaginaTerminos;
 
 public class spotityTest {
     public WebDriver driver;
@@ -21,6 +22,7 @@ public class spotityTest {
     PaginaPrincipal principal;
     PaginaPremiun premiun;
     PaginaRegistro registro;
+    PaginaTerminos terminos;
 
     //------------------------------------scenario 1
     @Given("estoy en la pagina de spotify")
@@ -132,4 +134,56 @@ public class spotityTest {
     }
 
     //////////////////////////////////////////////////////////////////
+    //---------------------------------------------scenario 3
+    @Given("estar en sitio de terminos y condiciones")
+    public void estar_en_sitio_de_terminos_y_condiciones() {
+        GetProperties properties = new GetProperties();
+        String chromeDriverUrl = properties.getString("CHROMEDRIVER_PATH");
+        System.setProperty("webdriver.chrome.driver", chromeDriverUrl);
+        driver = new ChromeDriver();
+        // carga url
+        driver.get(Constantes.URL2);
+        //maximizar
+        driver.manage().window().maximize();
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        // inicalizamos la pages
+        PageFactory.initElements(driver, this);
+    }
+
+    @When("buscar enlaces")
+    public void buscar_enlaces() {
+  terminos = new PaginaTerminos(driver);
+   terminos.buscarDisfrutar();
+        SoftAssert softAssert = new SoftAssert();
+     boolean termino1= terminos.buscarDisfrutar();
+     softAssert.assertTrue(termino1," no se encontro el elemento");
+     System.out.println(" TERMINOS1 "+termino1);
+        softAssert.assertAll();
+
+    }
+
+    @Then("validar algunos enlaces")
+    public void validar_algunos_enlaces() {
+        terminos = new PaginaTerminos(driver);
+
+        SoftAssert softAssert = new SoftAssert();
+
+        boolean termino1= terminos.buscarDisfrutar();
+        softAssert.assertTrue(termino1," no se encontro el elemento");
+        System.out.println(" TERMINOS1 "+termino1);
+
+        boolean termino2= terminos.buscarPagos();
+        softAssert.assertTrue(termino2,"no se encontro los pagos");
+        System.out.println("terminos2 : "+termino2);
+
+        boolean termino3= terminos.buscarServicios();
+        softAssert.assertTrue(termino3,"no se encontro los servicios");
+        System.out.println("terminos3 : " +termino3);
+
+        softAssert.assertAll();
+
+        driver.close();
+    }
+
 }
